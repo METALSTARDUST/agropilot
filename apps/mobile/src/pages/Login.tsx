@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { login } from '../services/auth'
+import logoDark from '../assets/logo-dark.svg'
+import logoLight from '../assets/logo-light.svg'
 
 interface Props {
   onLogin: (senhaTemproraria: boolean) => void
@@ -77,7 +79,7 @@ export default function Login({ onLogin }: Props) {
       {/* Logo */}
       <div style={{ marginTop: 60, marginBottom: 10, textAlign: 'center' }}>
         <img
-          src={dark ? '/src/assets/logo-dark.svg' : '/src/assets/logo-light.svg'}
+          src={dark ? logoDark : logoLight}
           alt="VGR Logo"
           style={{ width: 200, height: 'auto' }}
         />
